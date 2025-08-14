@@ -1,0 +1,1 @@
+A base streamlit app for rag application
