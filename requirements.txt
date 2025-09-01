@@ -1,3 +1,6 @@
 streamlit
 langchain
 openai
+os
+glob
+dotenv

@@ -1,0 +1,175 @@
+General Terms and Conditions of
+General Logistics Systems Germany GmbH & Co. OHG
+- hereinafter referred to as "GLS" - for business customers
+
+1. Scope
+1.1 These General Terms and Conditions (GTC) shall apply to all agreements between GLS and an entrepreneur within the meaning of § 14 German Civil Code (BGB) for the national and international transports of parcels. Supplementary to these GTC apply:
+- the guideline for regular senders
+(https://www.gls-pakete.de/en/glossary/downloads#guideline-regular-senders),
+- the NC goods guideline (non-conveyable goods)
+(https://www.gls-pakete.de/en/glossary/nc-goods-non-conveyable-goods),
+- for senders of pharmaceutical goods and medical products the conditions for the transport of pharmaceuticals, which GLS provides separately or on request.
+
+1.2 As far as - in the following order - mandatory legal regulations (in particular in case of cross-border transports of the Convention on the Contract for the Inter- national Carriage of Goods by Road (CMR) or the Montreal Convention), indivi- dual agreements including product and service descriptions contained therein or these GTC do not contain any deviating provisions, the provisions of §§ 407 et seq. German Commercial Code (HGB) on the freight contract shall apply. The application of the German Freight Forwarders' Standard Terms and Conditions (ADSp) is excluded. The inclusion of GTC of the sender is expressly contradicted. Tacit receipt of such GTC or tacit provision of services shall not be deemed as consent of GLS with the validity of the sender's GTC.
+2. Services and obstacles
+2.1 GLS carries out parcel transportations as provider of mass parcel transport ser- vices. Depending on the agreement, the parcels are either picked up by GLS or handed over by the sender at the responsible GLS outbound depot. Depending on the agreement, parcels can also be posted for dispatch at GLS ParcelShops or GLS ParcelStations. GLS will then transport the parcels to the destination and deliver them to the consignee in accordance with Section 3.
+
+2.1.1 A transportation as economical and fast as possible is achieved by standardised operations. The parcels are transported as consolidated shipment and sorted within the depots and reloading points with automatic conveyers. Impacts on parcels associated with this type of transport cannot be excluded, such as typical vibrations, centrifugal forces and impacts resulting from reloading. The trans- ports are not temperature-controlled. The parcels may therefore also be subject to temperature fluctuations and the effects of heat and cold, depending on the respective outside temperatures. The parcels are scanned when received at the outbound depot or dropped off at a GLS ParcelShop or at a GLS ParcelStation, when running through a reloading point, when received at the inbound depot, at the transfer to the delivery driver as well as upon delivery to the consignee, whereby date and time are registered. Further interface documentation is not carried out. GLS is entitled to use subcontractors to provide the services.
+
+2.1.2 In the event that the sender transfers parcel data to GLS via remote data trans- mission, the transfer of data shall not be deemed as prima facie evidence for the fact that the parcels listed in the electronic shipping list have actually been han- ded over to GLS. GLS is not obliged to compare the submitted parcel data with the parcels actually handed over, unless otherwise explicitly agreed. Therefore, missing notification to the sender about discrepancies shall neither be deemed as acknowledgment of the shipping list nor of receipt of the respective parcel.
+
+2.1.3 Due to the operational provision of logistics resources by GLS, the non-availabi- lity of notified parcels pursuant to Section 2.1.2 during pickup or handover shall not be deemed as termination of the sender in accordance with § 415 par. 1 HGB. This does not apply if the termination is based on reasons which are attributable to GLS.
+
+2.2 GLS is not committed to conduct examinations or to execute measures for the conservation or improvement of the goods and its packing.
+
+2.3 Instructions which have been issued by the sender after handing over of the par- cels need not be complied with. §§ 418 par. 1 to 5 and 419 HGB shall not apply.
+
+In case it becomes impossible to dispatch or deliver fixed date and express par- cels, the sender will be notified without undue delay in order to obtain his in- struction. In case it is impossible to receive such instruction within reasonable time, GLS shall be entitled to take actions which are suitable and reasonable with respect to the interests of the sender, in particular, GLS shall be entitled to return the parcel to the sender. The sender shall indemnify GLS for the necessary expenses or shall pay a reasonable remuneration for the necessary actions, if the impossibility of dispatch or delivery is not attributable to GLS.
+
+2.4 For the time of their duration, performance hindrances which are not attributable to GLS, relieve GLS from all obligations whose completion was made impossible through these.
+3. Delivery times and delivery
+3.1 Delivery times are not agreed unless otherwise determined in the con- text of specific products or services. The delivery of parcels is car- ried out on working days except Saturdays free to the door of the con- signee within estimated times of delivery, which can be found at https://www.gls-pakete.de/en/glossary/standard-delivery-times. Compliance with estimated delivery times is not part of the agreement and is neither assured nor guaranteed. If GLS informs the consignee in advance on behalf of the sender about the expected parcel delivery time, this also does not imply an agreed or guaranteed delivery time.
+
+Delivery shall be governed by the following provisions if and insofar as no pro-
+duct or service specific agreements exist.
+3.1.1 GLS carries out at the maximum two delivery attempts. For fixed date and ex- press parcels, a second delivery attempt shall be made only upon corresponding agreement with the sender or the consignee.
+
+3.1.2 Delivery can be carried out at commercial consignees at the goods receiving de- partment. The delivery at P.O. boxes or similar special addresses shall be exclu- ded.
+
+3.1.3 Parcels are delivered to the consignee at the address stated, unless it has been agreed that GLS will make parcels available for collection by the consignee at a GLS ParcelShop / GLS depot or at a GLS ParcelStation. Small parcels containing goods with or without a retail value whose weight does not exceed 2 kg, whose length and width do not exceed the DIN C4 format and whose height does not exceed 5 cm (consignments of goods) may also be delivered to the address indi- cated by dropping them into a device intended for the consignee and sufficiently capable of receiving letters.
+If delivery is not possible in accordance with Section 3.1.3 sentences 1 or 2, par- cels may be handed over to a substitute consignee after the first unsuccessful delivery attempt, if possible, unless the sender or the consignee has given in- structions to the contrary. Substitute consignees are persons who are present at the consignee's premises and immediate neighbours (neighbour drop-off), provided it can be assumed under the circumstances that they are entitled to accept the parcel. Immediate neighbours are all other persons who live or work in the same house or, if no such person exists or is found, all persons who live or work in the nearest house. The consignee shall be informed immediately of the name and address of the neighbour by means of physical or electronic notifica- tion (notification card or email) to the designated receiving facility (letterbox or electronic mailbox).
+3.1.4 In deviation from Section 3.1.3, if the consignee has given the appropriate instruc- tion, the parcel will be delivered to the stated address by depositing it in a suf- ficiently receptive device for the receipt of parcels provided by the consignee or available to the consignee, or to a provider-neutral parcel station, for the use of which GLS does not incur any additional costs, or, if a corresponding agreement has been made between GLS and the consignee, in another way, for example by depositing the parcel at a specific location (deposit authorisation) or by handing the parcel over to a specific person, provided that this person is a substitute con- signee in accordance with Section 3.1.3.
+
+GLS will immediately notify the consignee by means of a notification card or email when the parcel has been placed in the provider-neutral parcel station, when the parcel is deposited at the specific location and the time of depositing or that the parcel has been handed over to the neighbour specified by the con- signee.
+
+If delivery cannot be made in accordance with this Section 3.1.4 for reasons for which GLS is not responsible, delivery shall be made in accordance with Section 3.1.3.
+
+3.1.5 If a parcel cannot be delivered or made available for collection in accordance with either Section 3.1.3 or Section 3.1.4, the consignee will be informed of the un- successful delivery attempt and requested to collect the parcel from the nearest deposit location (GLS ParcelShop / GLS depot or GLS ParcelStation), stating the relevant address. The parcel will be held for collection at the deposit location for at least seven working days. GLS gives the consignee the option of objecting to the deposit in a GLS ParcelStation, which can only be used with the consignee's own technical equipment, for this individual case or permanently. The informa- tion on the right of objection and the contact details of GLS for exercising this right are included in the notification of the unsuccessful delivery attempt.
+
+3.1.6 Unless otherwise agreed between GLS and the sender, parcels that have been made available for collection and have not been collected and parcels that are finally undeliverable will be returned to the sender.
+
+3.1.7 Delivery is made by documented handover of the parcels to the consignee or substitute consignee, unless otherwise agreed, in particular if delivery is not made by depositing the parcel at a specific location based on a deposit authori- sation. GLS may use electronic means for documentation (e.g. smartphones) on which the name of the consignee or substitute consignee is recorded. As part of the SignatureService, express delivery or if this is part of agreed services, GLS re- quires the consignee or substitute consignee to sign for delivery. A confirmation of receipt is generated and archived together with the name of the receiving per- son and their digitalised signature. The reproduction of this digital confirmation of receipt or the printout of the electronically stored document serves as proof of delivery.
+
+3.1.8 GLS may give the consignee the opportunity to determine the place and time of delivery by means of selectable delivery options (e.g. delivery to a GLS ParcelShop, collection from a GLS depot, delivery on another day). If the con- signee makes use of this option, the right to issue instructions is transferred to the consignee in deviation from § 418 par. 2 sentence 2 HGB. GLS carries out a ma- ximum of two delivery attempts in accordance with the delivery option selected by the consignee and considering Sections 3.1.1 to 3.1.7.
+3.2 If parcels cannot be delivered in the manner set forth in Sections 3.1.1 to 3.1.8 and also cannot be returned to the sender because he can still not be determined or he refuses to take back the parcel, GLS shall be entitled to exploit the parcels af- ter a 90-day period. The period begins at the time undeliverability is ascertained. Parcels which cannot be exploited may be destroyed by GLS.
+
+4. Transportation exclusions (prohibited goods)
+The goods and parcels listed below shall be excluded from transportation by GLS:
+4.1 - parcels whose value exceeds € 5,000.00,
+- all parcels with a total value of more than € 25,000.00 handed over by a sen- der on one day at a shipping location or a GLS outbound depot for delivery to the same consignee,
+- goods which are insufficiently packed,
+- goods which require special handling (e.g. being particularly fragile or have to be transported upright or only lying on a certain side),
+- goods that require special protection during transport against heat, cold, temperature fluctuations, air humidity or shocks (especially against spoilage, drying out, leakage, melting),
+- remains, blood reserves, organs, live animals,
+- prescription drugs and drugs which must be transported separately from other goods (e.g. from tyres, hazardous goods), vaccines, insulin and narcotics,
+- precious metals and stones, watches, jewellery and pearls, objects of art, collector's items and antiques with a value of more than € 750.00 per parcel,
+- goods which themselves have a low value of up to € 50.00 per parcel, but whose loss, damage or exceeding of the delivery time (if owed) can
+cause high consequential losses exceeding 10 times the value of the goods (e.g. data media containing sensitive information),
+- keys, key cards and transponders,
+- documents submitted to meet a deadline or that must be transmitted within a deadline (e.g. tender documents, notices of termination, documents subject to deadlines),
+- phone cards, SIM cards and prepaid cards (e.g. for mobile phones),
+- money and documents with monetary value (e.g. stamps, securities, acceptance bills, savings books),
+- firearms and essential weapon parts according to § 1 of the
+German Weapon Law as well as ammunition,
+- hazardous goods of classes within the meaning of the statutory dangerous goods regulations - except the classes permitted within the scope of national dangerous goods shipping in accordance with Section 8 of these GTC,
+- substances or objects intended for disposal by way of recycling or disposal (waste according to the German Circular Economy Act, e.g. empty toner cartridges, rechargeable batteries or batteries, old electrical equipment),
+- parcels whose content, external quality, dispatch, storage, use or intended purpose violates legal or official regulations including export or import regulations, notification, authorization or approval requirements; these include parcels whose content violates legal provisions on the protection of intellectual property including forged or unlicensed copies of goods (counter- feiting),
+- goods or parcels the sending of which are prohibited under all applicable sanctions laws, for example because of their contents, their intended recipient or the country to or from which they are to be sent. Sanctions laws include all laws, regulations and orders imposing sanctions (including trade restrictions and economic sanctions) on countries, individuals or entities, including with- out limitation those imposed by the United Nations, the European Union and the member states of the European Union,
+- parcels classified as carriage forward.
+
+4.2 Furthermore, parcels shall be excluded from transportation which have a weight of more than 40 kg (EuroExpressParcel and GlobalExpressParcel more than 50 kg, GlobalBusinessParcel more than 30 kg), a combined length and girth of more than 3 m, a length of more than 2 m, a height of more than 0.6 m or a width of more than 0.8 m (oversize parcels).
+
+4.3 Additionally excluded shall be
+
+4.3.1 from cross-border transportation:
+- hazardous goods of all kinds,
+- tobacco products and liquors,
+- personal effects, carnet ATA goods and goods that require customs
+clearance under species protection law (e.g. CITES goods),
+- tyres, if Sweden is the destination country.
+
+4.3.2 from transportation as fixed date and express parcels:
+- hazardous goods of all kinds,
+- pharmaceutical goods and medical products.
+
+4.3.3 from airfreight:
+- prohibited articles according to the regulation (EC) No 300/2008 of 11th March
+2008 and its implementing rules as amended from time to time.
+
+4.4 If the sender hands over oversized parcels to GLS for transport contrary to Sec- tion 4.2, GLS shall nevertheless be entitled to continue the transport and to de- mand a general reimbursement of expenses in the lump sum of € 60.00, unless individual agreements provide for a different lump sum. The sender is explicitly allowed to verify that the expenses were not incurred, or that they were signi- ficantly less than the lump sum. GLS reserves the right for evidence of higher expenses.
+
+4.5 Individual labels or marks affixed to a parcel indicating a condition referred to in Sections 4.1 to 4.3 (e.g. "caution glass" or "bottom/top") shall not be deemed to be constitute knowledge on the part of GLS, in particular with regard to the type of carriage described in Section 2.1.1. GLS has no means to provide a special hand- ling. Consent to carriage given by a subcontractor or its vicarious agents or tacit acceptance of a parcel shall not constitute consent by GLS to carriage contrary to a transport exclusion.
+5. Obligations of the sender
+5.1 Each parcel must be provided by the sender with a single parcel label, comple- ted in full and correctly. The parcel label must be undamaged, clearly visible and uncovered on the largest side of the parcel. A parcel number shall only be used singularly. Old parcel labels, address details or other old marks must be removed.
+
+5.2 Unless otherwise agreed, the sender is obliged to transmit all parcel data required for the provision of product and service-specific services to GLS by remote data transmission. The sender is responsible for the completeness and accuracy of the transmitted data.
+Unless otherwise agreed, the sender is obliged to provide the parcel weight (gross weight incl. packaging) regardless of the product selected and mark par- cels whose individual weight exceeds 10 kg but not 20 kg, as well as parcels who- se individual weight exceeds 20 kg, with the information provided by GLS for these parcels regarding the increased or high weight. GLS will either provide the sender with the respective information either on the parcel label in accordance with the transmitted parcel weight or the sender shall obtain the information from GLS as a separate sticker and affix it to the parcel together with the parcel label in accordance with Section 5.1 before handing over the parcel to GLS.
+In case of return parcels that are subject to the ShopReturnService, Pick&ReturnService, Pick&ShipService or ExchangeService, the parcels are weighed and marked by GLS in accordance with this Section 5.2.
+
+GLS carries out random checks to ensure that the sender has complied with the sender's marking obligation. If GLS discovers that a parcel that requires marking is not or not correctly marked, GLS will take over the proper marking of the parcel and will charge the sender the reprocessing fee specified in the individual agreement.
+
+5.3 The sender is obliged to comply with the transport exclusions and must carry out appropriate checks before handing over the parcels to GLS.
+The sender is responsible for providing the goods sent with internal and external packaging that is appropriate for the expected transport stresses and suitable for the goods being sent. The goods must be packed in such a way that they are pro- tected against loss and damage and that no damage occurs to GLS either. Parcels must be prepared in such a way that access to the contents is not possible with- out leaving visible traces. The GLS guideline for regular senders is designed to assist the sender.
+
+If the sender fails to comply with these obligations, GLS may, at its reasonable discretion, take any measures necessary to remedy the situation in breach of the agreement, in particular to avoid hazards (e.g. unloading, storage, return, making the parcel available for collection by the sender).
+5.4 If GLS is entrusted with the cross-border transport of the goods, the order also includes customs clearance if this is necessary to carry out the transport to the destination. In such cases, the sender is responsible to provide GLS with all the correct documents and data required for customs clearance without being asked.
+5.4.1 The distribution of costs for customs clearance, duties and taxes depends on the chosen postage. If ancillary transport costs are to be borne by the consignee abroad, the domestic sender is obliged to cooperate and ensure that the con- signee pays these ancillary transport costs. The sender must reimburse GLS for those ancillary transport costs that are not paid by the consignee upon first request. If the sender has also violated his duty to co-operate, GLS is also en- titled to charge the sender a lump sum of € 30.00. The sender is entitled to prove that no such costs were incurred or that they were significantly lower than the lump sum. GLS reserves the right to prove higher costs.
+
+5.4.2 If further transport costs, customs clearance costs, customs duties, taxes or other levies are incurred due to the return of export parcels, these shall be borne by the sender, unless GLS is responsible for the return.
+
+5.4.3 In case of transports to other EU countries, the sender is responsible for fulfilling the obligations to provide evidence in connection with the VAT tax exemption for intra-community deliveries.
+6. CashService
+6.1 GLS offers the service CashService enabling the possibility to deliver parcels cash on delivery. The preparation and registration of CashService parcels is carried out by the sender according to the guidelines of GLS. In case several parcels are han- ded over to GLS for delivery to the same consignee cash on delivery, every par- cel has to be declared separately as a CashService parcel. For each CashService parcel an additional fee will be charged.
+6.2 The amount to be collected must be entered on the appropriate designated GLS form. The amount to be collected shall be limited for the individual parcel to a maximum of € 2,500.00. If several parcels are handed over on the same day to GLS for the transport to the same consignee, then the sum of the amounts to be collected must not exceed € 9,999.99. If parcel data is transferred via remote data transmission, the amount being submitted electronically shall be binding. If the amount to be collected is indicated in digits and in words, the digits shall prevail in case of doubt. For export parcels with a destination outside the euro area, the amount shall be declared in the currency of the destination country.
+6.3 Any CashService offered to the sender of the CashService parcel are offered on the basis and understanding that GLS will act as the sender's cash collection agent only and GLS does not have the authority to bind the sender, or to con- clude an agreement with the consignee of the CashService parcel on behalf of the sender. The sender shall perform his anti-money laundering obligations as required by applicable law and/or regulation.
+7. Guaranteed24Service and express
+7.1 With the Guaranteed24Service, parcels will be delivered within Germany (except German islands) on the working day (Monday - Friday) following the pickup or handover, provided that the parcel has been consigned to the GLS outbound depot until 5 p.m. on the day of pickup or handover.
+7.2 Express parcels will be delivered within the agreed time. Deliveries to Ger- man islands are not possible within the scope of express shipping. Be- fore ordering an express shipment, the availability of the service for the desired destination address must be checked via the shipping planner at https://gls-group.com/DE/en/shipping-planner. Express orders concerning invalid destination addresses are excluded.
+7.3 If the delivery of parcels under the Guaranteed24Service does not take place on the working day following the pickup or handover, or if the agreed delivery time is exceeded by more than 15 minutes in case of express delivery, GLS compensa- tes the surcharge which was paid for the service, less VAT, provided that GLS was responsible for the delay. The provisions of Section 10 shall remain unaffected.
+
+
+7.4 Due to the fact that parcel delivery is handled differently by the organizers of trade fairs, the delivery time cannot - subject to special agreement in an indivi- dual case - be guaranteed for parcels addressed to trade fairs.
+8. Hazardous goods shipping, including Limited Quantities (LQ)
+8.1 Unless otherwise agreed, GLS provides exclusively in inner-German traffic the forwarding of hazardous goods of the classes 2 (excluding the classification code 1-3, 4F, 9 and toxic gases), 3, 4.1 (excluding the classification code SR and FO), 5.1 (excluding packing group I and the classification code O3, OT1, OF, OS, OW, OTC), 8 and 9 (excluding the classification code M1 up to M3, M8 to M10) according to the enclosures A and B of the European Agreement concerning the International Carriage of Dangerous Goods by Road (ADR) and the Hazardous Goods Regula- tion Road, Railroad and Domestic Shipping (GGVSEB). The shipment of hazar- dous goods by the sender requires the prior approval of GLS.
+
+8.2 The sender is responsible, that upon handing over of hazardous goods to GLS the relevant legal regulations with regard to declaration, labelling, packaging, en- closure of the transport papers and written instructions etc. are observed, even if these obligations apply to the one who in fact hands over the hazardous goods.
+When handing over hazardous goods (HazardousGoodsService) the sen- der must attach to the parcels the bar-coded hazardous goods label required by the GLS system in accordance with the valid reference-list. The shipment of hazardous goods in limited quantities is carried out as part of the LimitedQuantitiesService.
+9. Transportation fees, reimbursement of expenses
+9.1 The prices and surcharges agreed between GLS and the sender in the individual agreements apply. If the dimensional weight (based on 1 m3 = 166.67 kg) exceeds the real weight, GLS can carry out a separate subsequent billing. If a parcel has to be returned to the sender for reasons not attributable to GLS, GLS invoices the sender once more the transportation fee.
+
+9.2 Invoices of GLS are to be paid immediately and without deduction. The set-off with counter claims by the sender is forbidden, unless they are undisputed or legally decided. Invoices of GLS are considered as having been approved three months after receipt of the invoice. This consequence will be pointed out on each invoice additionally.
+
+9.3 If the sender instructs GLS to receive incoming parcels or to import a parcel arriving from abroad, GLS has the right, but not the obligation to advance freight charges, cash on delivery fees, customs duties, taxes and other charges as well as expenses. The sender is obliged to refund these expenses.
+10. Liability
+10.1 GLS shall be liable for any damage resulting from the loss of or physical damage to the goods occurring between the time the goods are taken over and their de- livery or from exceeding the delivery time (if owed) as follows:
+
+10.1.1 In case of transport within Germany in accordance with the provisions of the HGB.
+
+10.1.2 In case of international carriage by road in accordance with the provisions of the CMR.
+
+10.2 If the sender has not taken out transport insurance, GLS reimburses, in excess of the liability limits set forth in Sections 10.1.1 and 10.1.2, for the loss of or damage to the goods, the value of the goods shipped, limited to the amount of:
+- the purchase price of the sender or
+- in case of used goods, the current market value or
+- in case of goods shipped on occasion of an auction, the auction price depending on which amount is the lowest in the individual case, however limited to an amount of up to € 750.00 (for CashService parcels limited to the amount of
+€ 2,500.00) per parcel.
+Retention agreed between the insurer of the sender and the sender leads to the applicability of this Section 10.2 if this has been agreed between GLS and the sender.
+
+10.3 GLS is not liable for consequential damages and costs, e.g. purely economic losses, loss of profit, loss of sales or expenses of substitute performances or damages resulting from delays in customs clearance or airfreight completion.
+
+10.4 The limitations on liability provided for in Sections 10.1 to 10.3 do not apply if the damage resulted from an act or omission by GLS or by one of the persons referred to in § 428 HGB done with the intent to cause such damage or recklessly and in the knowledge that damage would probably result.
+10.5 In case of international carriage by air in application of the Montreal Convention, liability shall be limited by Article 22 of the Montreal Convention irrespective of the provisions of Sections 10.1 to 10.4. Art. 25 Montreal Convention shall not apply.
+10.6 The statutory regulations for damage notification periods and the regulations of
+the division of damages apply.
+10.7 The liability of the sender, in particular according to § 414 HGB as well as for damages incurred by GLS due to the violation of transport exclusions, remains unaffected.
+The sender shall indemnify GLS for all damages, including fines, incurred by GLS because of the sender's intentional or negligent violation of the marking obliga- tion in accordance with Section 5.2.
+
+10.8 If GLS or GLS IT Services GmbH ("GLS IT") have granted the sender the right to use shipping-software for the time of the cooperation and if such software has been installed as the case may be GLS and GLS IT shall in case of negligently caused damage to property and financial loss only be liable in the event of a breach of a material contractual obligation, but the amount of liability shall be limited to the damage foreseeable and typical for the agreement at the time of its conclusion; material contractual obligations are those whose performance characterises the agreement and on which the sender may rely. GLS or GLS IT shall not be liable for the loss of the sender's data and its recovery if such loss would have been avoidable had the sender observed appropriate backup procedures.
+11. Severability and jurisdiction
+11.1 If any provision of these GTC should be invalid or non-enforceable, this shall not affect the validity and enforceability of the remaining provisions.
+
+11.2 The exclusive venue for litigation with traders, public corporations or special funds under public law shall be Bad Hersfeld/Hessen.
+
+Status as of: January 2025
+- This translation of the GTC is made for convenience reasons only. For all disputes arising from or in conjunction with the GTC of GLS, only the text of the correspon- ding German version of the GTC of GLS shall be legally binding. -
+
+
