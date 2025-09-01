@@ -6,9 +6,14 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.prompts import PromptTemplate
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+open_api_key= os.getenv("key")
+
 st.title(" Quick Rag App")
 
-open_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 uploaded_file = st.sidebar.file_uploader("Upload your document", type=["txt"])
 
 #rag set-up
@@ -42,15 +47,15 @@ def setup_rag(document_text, api_key):
     return retriever, rag_chain
 
 # initialize db
-if uploaded_file and open_api_key:
-    document_text = uploaded_file.read().decode()
-
-    retriever, rag_chain = setup_rag(document_text, open_api_key)
-    st.sidebar.success("Document processed!")
-elif uploaded_file:
-    st.sidebar.warning("Enter api key")
-elif open_api_key:
-    st.sidebar.warning("Upload a document")
+if uploaded_file:
+    if open_api_key:
+        document_text = uploaded_file.read().decode()
+        retriever, rag_chain = setup_rag(document_text, open_api_key)
+        st.sidebar.success("Document processed!")
+    else:
+        st.sidebar.error("OpenAI API key not found in environment variables")
+else:
+    st.sidebar.warning("Please upload a document to enable RAG")
 
 
 # initialize chat history
