@@ -8,13 +8,36 @@ from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 import os
 from dotenv import load_dotenv
+import glob
+import pickle
 
 load_dotenv()
 open_api_key= os.getenv("key")
+DOCUMENTS_FOLDER= "docs"
 
 st.title(" Quick Rag App")
+#tab1,  tab2 = st.tabs(["Chat","Create Vector Database"])
 
-uploaded_file = st.sidebar.file_uploader("Upload your document", type=["txt"])
+@st.cache_data
+def load_documents_from_folder(folder_path):
+    documents_text = ""
+    file_count = 0
+
+    if not os.path.exists(folder_path):
+        return None, 0
+    
+    txt_files = glob.glob(os.path.join(folder_path,"*.txt"))
+
+    for file_path in txt_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                documents_text += file.read() + "\n\n"
+                file_count +=1
+        except Exception as e: 
+            st.sidebar.error(f"Error reading {file_path}: {str(e)}")
+    
+    return documents_text if documents_text else None, file_count
+
 
 #rag set-up
 @st.cache_resource
@@ -47,15 +70,14 @@ def setup_rag(document_text, api_key):
     return retriever, rag_chain
 
 # initialize db
-if uploaded_file:
+documents_text, file_count= load_documents_from_folder(DOCUMENTS_FOLDER)
+if documents_text:
     if open_api_key:
-        document_text = uploaded_file.read().decode()
-        retriever, rag_chain = setup_rag(document_text, open_api_key)
-        st.sidebar.success("Document processed!")
+        retriever, rag_chain = setup_rag(documents_text, open_api_key)
     else:
         st.sidebar.error("OpenAI API key not found in environment variables")
 else:
-    st.sidebar.warning("Please upload a document to enable RAG")
+    st.sidebar.warning("No document found")
 
 
 # initialize chat history
@@ -82,11 +104,11 @@ if prompt:
 
         st.session_state.messages.append(HumanMessage(prompt))
 
-    if uploaded_file and open_api_key:
+    if documents_text and open_api_key:
         documents = retriever.invoke(prompt)
         doc_texts = "\n".join([doc.page_content for doc in documents])
         result = rag_chain.invoke({"input": prompt, "documents": doc_texts})
-    elif not uploaded_file:
+    elif not documents_text:
         result = "Please upload a document first to ask questions."
     elif not open_api_key:
         result = "Please enter your OpenAI API key."
