@@ -48,7 +48,8 @@ def save_vectordatabase(api_key, document_text, size = 250, overlap = 0 ):
     vectorstore = SKLearnVectorStore.from_documents(
         documents = documents,
         embedding = embeddings,
-        persist_path = "vectorstore.json"
+        persist_path = "vectorstore.json",
+        serializer="json"
     )
 
     return vectorstore
@@ -57,15 +58,17 @@ def save_vectordatabase(api_key, document_text, size = 250, overlap = 0 ):
 #rag set-up
 @st.cache_resource
 def setup_rag(api_key):
-    if not os.path.exists("vectorstore.json"):
-        return None, None
+    #if not os.path.exists("vectorstore.json"):
+    #    return None, None
     
     # Create vectorstore with persist_path
     embeddings = OpenAIEmbeddings(api_key=api_key)
     vectorstore = SKLearnVectorStore(
         embedding=embeddings,
-        persist_path="vectorstore.json"
+        persist_path = "vectorstore.json",
+        serializer="json"
     )
+
     retriever = vectorstore.as_retriever(k=4)
 
     prompt_template = PromptTemplate(
@@ -158,6 +161,7 @@ with tab1:
                         # }
                         # with open("vectorstore.pkl", "wb") as f:
                         #     pickle.dump(vectorstore_data, f)
+                        vectorstore.persist()
                         st.success(f"Vector database created and saved! Processed {file_count} documents")
                     
                     else:
