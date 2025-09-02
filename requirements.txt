@@ -1,6 +1,6 @@
 streamlit
 langchain
 openai
-os
-glob
 dotenv
+langchain_openai 
+langchain_community
