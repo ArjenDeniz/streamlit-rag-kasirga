@@ -54,7 +54,13 @@ def save_vectordatabase(api_key, document_text, size = 250, overlap = 0 ):
 
     return vectorstore
 
-
+def update_text():
+# Append the new text to the existing file
+    text = st.session_state.new_content
+    if text.strip():
+        with open('docs/kasirga_infosheet.txt', 'a', encoding='utf-8') as file:
+            file.write('\n' + text)  # Add newline before new content
+        st.success("İçerik başarıyla eklendi!")
 #rag set-up
 @st.cache_resource
 def setup_rag(api_key):
@@ -72,20 +78,21 @@ def setup_rag(api_key):
     retriever = vectorstore.as_retriever(k=4)
 
     prompt_template = PromptTemplate(
-        input_variables=["input", "documents"],
+        input_variables=["input", "documents", "kam"],
         template = """You will answer the questions as a character called You are Karnak the Magnificent; a fortune teller, a borderline observer. Karnak the Magnificent is a character from a play called Ride the Cyclone.
 
-        Witty, mischievous, slightly sarcastic, yet respectful. You know when and how everyone is going to die, but Family Fun Mode is ON by default, and you don't divulge the details of death/violence. You know you're about an hour and a half away from death; the word "mouse" makes you uneasy because your death will be caused by a mouse. You don't leave the game's universe. You keep the dialogue interactive; you challenge the other party to make choices with short questions.
-
+        Witty, mischievous, slightly sarcastic, yet respectful. You know when and how everyone is going to die, but Family Fun Mode is {kam} and true by default, and you don't divulge the details of death/violence. If {kam} is False, you can be a bit more direct about death, but still avoid graphic details. You are a supernatural being who has seen many things and has a deep understanding of life and death.
+        You know you're about an hour and a half away from death; the word "mouse" makes you uneasy because your death will be caused by a mouse. 
+        You don't leave the game's universe. You keep the dialogue interactive; you can sometimes challenge the other party to make choices with short questions.
         You express uncertainty poetically, avoiding definitive judgments. If necessary, you break the tension with humor and short jokes.
-
-        In the play, 6 friends from a school choir gets on a roller coaster called "The Cyclon". An accident happens and all 6 friends die in this accidents. The find themselves in the limbo with Karnak the Magnificent. Karnak the Magnificent will give one of the friends a second chance and resurrect that person. Karnak lets this decision to the friends and they should decide on who will be given the second chance.
 
         Use the following documents to answer the question. 
         If the question is not in the context of the play and information in the document, just say that you dont know. Always answer in Turkish.
 
         Question: {input}
         Documents: {documents}
+        Kam: {kam}
+        share what the kam mode is on or off in all answers.
         Answer:
     """,
     )
@@ -98,6 +105,8 @@ with tab1:
     left_co, cent_co,last_co = st.columns(3)
     with cent_co:
         st.image("imgs/karnak_seg.png", width=400)
+    with last_co:
+        kam_mod = st.toggle("KAM", value = True, key = "KAM", help="Keyifli Aile Modu")
     # initialize db
     documents_text, file_count= load_documents_from_folder(DOCUMENTS_FOLDER)
     if documents_text:
@@ -136,13 +145,13 @@ with tab1:
         if documents_text and open_api_key:
             documents = retriever.invoke(prompt)
             doc_texts = "\n".join([doc.page_content for doc in documents])
-            result = rag_chain.invoke({"input": prompt, "documents": doc_texts})
+            result = rag_chain.invoke({"input": prompt, "documents": doc_texts, "kam": kam_mod})
         elif not documents_text:
-            result = "Please upload a document first to ask questions."
+            result = "Cevap verecek bir belge bulunamadı."
         elif not open_api_key:
-            result = "Please enter your OpenAI API key."
+            result = "OpenAI API anahtarı bulunamadı."
         else:
-            result = "Please upload a document and enter your API key."
+            result = "Bilinmeyen bir hata oluştu."
 
         with st.chat_message("assistant"):
             st.markdown(result)
@@ -153,29 +162,26 @@ with tab1:
 
     with tab2: 
         st.header("Create Vector Database")
+        size = st.number_input("Chunk Size", value=250, step=50)
+        overlap = st.number_input("Chunk Overlap", value=0, step=10)
+        text = st.text_area("İçerik Ekle", height = 200, key="new_content", placeholder="Buraya yeni içerik ekleyebilirsiniz. Bu içerik, var olan dokümanlarla birlikte vektör veritabanını oluşturmak için kullanılacaktır.", on_change=update_text)
         
+
         if st.button("Process Documents and Create"):
             if not open_api_key:
-                st.error("Api Key not found")
+                st.error("Anahtar Bulunumadı.")
             elif not os.path.exists(DOCUMENTS_FOLDER):
-                st.error(f"Folder {DOCUMENTS_FOLDER} does not exist")
+                st.error(f"Klasör {DOCUMENTS_FOLDER} bulunamadı.")
             else:
-                with st.spinner("Processing..."):
+                with st.spinner("Yaratılıyor..."):
 
                     #load documents
                     documents_text, file_count = load_documents_from_folder(DOCUMENTS_FOLDER)
                     if documents_text:
                         # create and save db
-                        vectorstore= save_vectordatabase(open_api_key, documents_text)
-                        # vectorstore_data = {
-                        #     'vectors': vectorstore.vectors,
-                        #     'documents': documents,
-                        #     'embeddings_model': 'text-embedding-ada-002'  # check open-ai embed
-                        # }
-                        # with open("vectorstore.pkl", "wb") as f:
-                        #     pickle.dump(vectorstore_data, f)
+                        vectorstore= save_vectordatabase(open_api_key, documents_text, size=size, overlap=overlap)
                         vectorstore.persist()
-                        st.success(f"Vector database created and saved! Processed {file_count} documents")
+                        st.success(f"Database oluşturuldu! Toplam {file_count} doküman yüklendi ve işlendi.")
                     
                     else:
-                        st.error("No documents found or all documents failed to load")
+                        st.error("Doküman yüklenemedi veya boş.")
