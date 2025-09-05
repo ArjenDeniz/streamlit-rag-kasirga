@@ -13,7 +13,7 @@ import pickle
 
 
 load_dotenv()
-open_api_key= os.getenv("key")
+open_api_key = st.secrets["key"]
 DOCUMENTS_FOLDER= "docs"
 
 st.title(" Muhteşem Karnak")
