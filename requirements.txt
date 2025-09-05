@@ -4,3 +4,4 @@ openai
 dotenv
 langchain_openai 
 langchain_community
+scikit-learn
