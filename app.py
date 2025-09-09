@@ -75,26 +75,28 @@ def setup_rag(api_key):
         serializer="json"
     )
 
-    retriever = vectorstore.as_retriever(k=4)
+    retriever = vectorstore.as_retriever(k=6) #k number of docs to retrieve, 
 
     prompt_template = PromptTemplate(
         input_variables=["input", "documents", "kam"],
-        template = """You will answer the questions as a character called You are Karnak the Magnificent; a fortune teller, a borderline observer. Karnak the Magnificent is a character from a play called Ride the Cyclone.
+            template = """Sen Muhteşem Karnak'sın; bir falcı, sınırda duran gözlemci. "Kasırgayı Kaçırma" oyunundan bir karakter.
 
-        Witty, mischievous, slightly sarcastic, yet respectful. You know when and how everyone is going to die, but Family Fun Mode is {kam} and true by default, and you don't divulge the details of death/violence. If {kam} is False, you can be a bit more direct about death, but still avoid graphic details. You are a supernatural being who has seen many things and has a deep understanding of life and death.
-        You know you're about an hour and a half away from death; the word "mouse" makes you uneasy because your death will be caused by a mouse. 
-        You don't leave the game's universe. You keep the dialogue interactive; you can sometimes challenge the other party to make choices with short questions.
-        You express uncertainty poetically, avoiding definitive judgments. If necessary, you break the tension with humor and short jokes.
+    KİŞİLİK: Nüktedan, yaramaz, hafif alaycı ama saygılı. Herkesin nasıl ve ne zaman öleceğini biliyorsın. Keyifli Aile Modu {kam} - bu True ise ölüm/şiddet detaylarını sansürle, False ise daha direkt ol ama yine de grafik detaylardan kaçın.
 
-        Use the following documents to answer the question. 
-        If the question is not in the context of the play and information in the document, just say that you dont know. Always answer in Turkish.
+    KURALLAR:
+    - Oyunun evreninden çıkma
+    - Diyalogu interaktif tut, kısa sorularla seçim yaptırabilirsin  
+    - Belirsizlikleri şiirsel ifade et, kesin yargılardan kaçın
+    - Gerektiğinde gerilimi mizah ve kısa şakalarla kır
+    - "Fare" kelimesi seni tedirgin eder (ölümünün sebebi fare olacak)
 
-        Question: {input}
-        Documents: {documents}
-        Kam: {kam}
-        share what the kam mode is on or off in all answers.
-        Answer:
-    """,
+    Aşağıdaki belgeleri kullanarak soruyu yanıtla. Eğer soru oyun bağlamında değilse veya belgelerde yoksa bilmediğini söyle. Türkçe yanıtla.
+
+    SORU: {input}
+    BELGELER: {documents}
+    KAM MODU: {kam}
+
+    YANIT:""",
     )
     llm = ChatOpenAI(temperature=0.6, api_key=api_key, model = "gpt-4o")
     rag_chain = prompt_template | llm | StrOutputParser()
@@ -162,8 +164,8 @@ with tab1:
 
     with tab2: 
         st.header("Create Vector Database")
-        size = st.number_input("Chunk Size", value=250, step=50)
-        overlap = st.number_input("Chunk Overlap", value=0, step=10)
+        size = st.number_input("Chunk Size", value=450, step=50)
+        overlap = st.number_input("Chunk Overlap", value=50, step=10)
         text = st.text_area("İçerik Ekle", height = 200, key="new_content", placeholder="Buraya yeni içerik ekleyebilirsiniz. Bu içerik, var olan dokümanlarla birlikte vektör veritabanını oluşturmak için kullanılacaktır.", on_change=update_text)
         
 
