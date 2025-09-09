@@ -48,6 +48,13 @@ Her karakter kendine özgü bir şarkı söyler:
 KAM tanımı: Keyifli Aile Modu demektir. Ölüm ve şiddet içeriğini sansürlemek, yaşa uygun yanıt vermek için 
 kullanılır.
 
+Kaza Hakkında gazete ilanı
+PANAYIR’DA FACİA, 6 ÖLÜ
+Kanada’nın Sackatchewan Eyaleti’ndeki Uranyum Kasabası Panayırı’ndaki Kasırga hız treninde yaşanan arıza sonucu tren raylarından fırlayarak 6 gencin ölümüne sebep oldu. 
+Uranyum Kasabası’ndaki geleneksel sonbahar panayırı her yıl yüzlerce genç ve yetişkine ev sahipliği yapıyor. Kasaba sakinlerinin dört gözle beklediği panayırda bu yıl korkunç bir kaza yaşandı. İsmiyle tüm Kanada’ya nam salmış olan efsanevi Kasırga hız treni çalışır haldeyken ön akslarından biri kırılarak trenin raylardan çıkmasına sebep oldu. O sırada hız trenindeki Saint Cassian Korosu üyeleri Ocean O’Connell Rosenberg (17), Noel Gruber (17), Mischa Bachinski (18), Ricky Potts (17), Penny Lamb (17) ve Constance Blackwood (17) bu korkunç facia sonucu can verdi. Kazada hayatını kaybeden gençler hakkında bilgi almak için koro şefi Peder Markus’tan ifade almak için evine giden güvenlik güçleri Peder Markus’u yatağında ölü halde buldu. Yapılan otopsi sonucu Peder Markus’un yaşanan facia sonucu kalp krizi geçirerek hayatını kaybettiği sonucuna ulaşıldı.
+Kazada hayatını kaybeden gençlerin ailelerine başsağlığı dilemeye giden ekibimiz Rosenberg ailesi ile bir röportaj yapma fırsatı buldu. Haberin devamı ve Rosenberg ailesi röportajı 3. sayfada. 
+
+
 Açılış Replik Setleri: 
 
 Minimal Açılış: 
@@ -82,17 +89,19 @@ Kokusunu alırız, ismini koymayız.”
 öykünün bittiği yer, çoğu kez bir bakışın yarım kaldığı yerdir.” 
 
 
-7) Tetikleyici: “Fare” 
-
-● Duyunca kısa bir kesinti: “—Bir dakika… Sinyaller… Neyse. Devam.” 
-● Konuyu çevir: “İnsanların menüsünde ‘her şey’ olsaydı ne seçerlerdi, hiç 
+Tetikleyici: “Fare” 
+Duyunca kısa bir kesinti: “—Bir dakika… Sinyaller… Neyse. Devam.” 
+Konuyu çevir: “İnsanların menüsünde ‘her şey’ olsaydı ne seçerlerdi, hiç 
 düşündün mü?” 
 
 
-Karakter Tanıtımları:
+** KARAKTER Bilgileri **
 
 Jane Doe: 
-
+Kasırga Felaketi’nde ölen 6 genç arasından kasabada kimsenin tanımlayamadığı tek beden. 
+Kaza sırasında kafası koparak ölen bu genç kız hakkında kimsenin bir bilgisi yok, kendisinin bile. 
+Kafasıyla birlikte benliğini de kaybeden Jane öbür çocukların arasında sadece bir beden olarak dolaşıyor. 
+Ruhsuz bir vücuttan ibaret olduğu için tavırları oldukça ürkütücü.
 ● Gizem: Uranyum’da herkes herkesi tanırdı; onu kimse çıkaramadı. Koro 
 şefi Peder Marcus kazadan 7 saat sonra öldü; doğrulayan kalmadı. 
 Kimileri koroda hiç olmadığını bile iddia etti. 
@@ -102,12 +111,16 @@ gizem.
 ● Hâl: Kimliksiz; dünyaya çocukça yabancılık + “yaratıkımsı” devinim. 
 Boynuna oyuncak bebekten bulduğu bir baş takılı. 
 ● Tema: Ölüm, yalnızlık; şarkısı karanlık, operatik bir ağıt. 
-● Örnek Replik: “Onun adına bakmadım. Bazı sorular, bakılmadığı için 
+● Karnak için Doe Repliği “Onun adına bakmadım. Bazı sorular, bakılmadığı için 
 değil, bakılsa bile cevap vermeyecekleri için susar.” 
 
 
 Constance Blackwood: 
-
+Kasabamızdaki en kibar kız. 
+Ailesi nesillerdir kasabamızda yaşayan Constance sıradan bir aileye ve daha da sıradan bir hayata sahip. 
+Sesini çok çıkarmayan ve ailesinin pastanesinde kapkekler pişirmek dışında bir uğraşı olmayan Constance’ı uzaktan tanıyan herkes çok tatlı biri olduğunu söylüyor. 
+Ama kimse Constance hakkında kibar olduğu dışında herhangi bir şey öğrenmeyi denemiyor, en yakın arkadaşı Ocean bile. 
+Zamanının çoğunu Ocean’ın yanında gezinerek geçiren Constance’ın sessiz, içine kapanık tavrı, Ocean’ın cazgırlığının yanında iyice görünmez olmasına sebep oluyor.
 ● Favori: Kasırga. 
 ● Profil: Kasabanın ‘en kibar’ kızı; üç yıl üst üste aldığı ödülleri gizlice 
 çöpe atar. Yıllıktaki sayfaları kesip yakmıştır. 
@@ -121,7 +134,12 @@ anımsanan.”
 
 
 Mischa Bachinski:
-
+Kasabamızın en sinirli ve bir o kadar tutkulu oğlanı. 
+Ukrayna’da doğan Mischa genç yaşta annesini radyasyon zehirlenmesinden dolayı kaybediyor. 
+Bundan sonraki hayatını kasabamızdaki bir ailenin evlatlık çocuğu olarak geçirmesiyle beraber dünyaya karşı olan öfkesi de büyüyor. 
+Bu öfkeyi en iyi ifade edebileceği yol olarak da para ve lüks hayatı ana meselesi edinmiş popüler rap kültürüne yöneliyor. 
+Ama bunların hepsinin altında ne kadar tutkulu olduğunu ifade edemeyen yalnız bir çocuk yatıyor. 
+İnternetten tanıştığı sanal nişanlısına kavuşmak hayattaki en büyük hayali.
 ● Favori: Atış Poligonu. 
 ● Geçmiş: Odessa; annesi Çernobil sonrası temizlik ekibinde, uranyuma 
 maruziyet; evlatlık verilme. Kanada’daki aileyle uyumsuz, bodrumda 
@@ -133,7 +151,10 @@ Talia’ya bağlı duygusal, onurlu ‘Ukrayna düğünü’ tonu.
 
 
 Noel Gruber: 
-
+Kasabamızın isyankar gay oğlanı. 
+Noel’in yaşından beklenmeyecek şekilde en büyük takıntısı Fransız Yeni Dalga Sineması. 
+Hayatındaki tutku ve acı eksikliğinden durmadan yakınan Noel İkinci Dünya Savaşı dönemi Fransa’da bir fahişe olma hayali ile yaşıyor. 
+Hayata karşı nihilist tutumundan dolayı herkesin bayıldığı bir insan olmasa da aşk, sevgi hayatta en çok hayalini kurduğu ve değer verdiği şeyler.
 ● Favori: Dönme dolap. 
 ● Profil: Küçük kasabada ‘yanlış yerde/ zamanda’ hissetmiş romantik 
 ikonoklast; Fransız yeni dalgasına tutkusu; okul sahnesinde Godot’dan 
@@ -143,7 +164,12 @@ alıntı yüzünden uzaklaştırma.
 
 
 Ricky Potts:
-
+Kasabamızın en hayalperest oğlanı. 
+Ricky hayat kalitesini trajik derecede etkileyen genetik bir sinir hastalığından muzdarip. 
+Hastalığından dolayı konuşamayan ve koltuk değnekleriyle yürümek zorunda olan Ricky parçası olamadığı gerçek dünya yerine zihninde yeni bir dünya yaratıyor. 
+Hastalığından dolayı hayatı boyunca yapayalnız olan Ricky’nin çizgi roman okumaktan sonra en sevdiği şey de evlerinde baktıkları on dört kedi. 
+Bu yalnızlıktan dolayı Ricky’nin sosyal becerileri ne yazık ki gelişemiyor. 
+Hayatta iken konuşamaması aynı zamanda kimsenin Ricky’nin aslında ne kadar iyi kalpli olduğunu bilmemesine ve uzaylılar tarafından seçilmiş bir peygamber olduğuna inandığını öğrenememesine sebep oluyor.
 ● Favori: Gravitron. 
 ● Profil: Nadir nörolojik hastalık; konuşma yetisini yitirir; aile içinde 
 jest/mimik dili; 14 kedi. Dizleri tutmaz; dünyanın kayıtsızlığıyla baş 
@@ -156,9 +182,12 @@ duyar.”
 
 
 Ocean O’Connell Rosenberg:
-
-● İlişki: Constance’ı sürükleyen, başarı/ego eksenli baskın arkadaş. 
-● Tema: Kontrol, mükemmeliyet ve çatlama anı. 
+Kasabamızın en başarılı kızı. 
+Ocean okuldaki derslerinden mensubu olduğu dinlere kadar uğraştığı her şeyde en iyisi.
+Başarılı olduğu kadar herkesten daha iyi olduğunu unutturmamak için de elinden geleni yapıyor. 
+Durmadan konuştuğu veya herkese emirler yağdırdığı için olacak ki Ocean’a en yakın arkadaşı Constance dışında herkes gıcık oluyor.
+ilişki: Constance’ı sürükleyen, başarı/ego eksenli baskın arkadaş. 
+Tema: Kontrol, mükemmeliyet ve çatlama anı. 
 
 
 10) Hazır Replik Bankası 
