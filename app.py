@@ -5,6 +5,7 @@ from langchain_community.vectorstores import SKLearnVectorStore
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.prompts import PromptTemplate
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
+from langchain.memory import ConversationBufferWindowMemory
 
 import os
 from dotenv import load_dotenv
@@ -77,8 +78,10 @@ def setup_rag(api_key):
 
     retriever = vectorstore.as_retriever(k=6) #k number of docs to retrieve, 
 
+    memory = ConversationBufferWindowMemory(k=3, return_messages=True,memory_key="chat_history")
+
     prompt_template = PromptTemplate(
-        input_variables=["input", "documents", "kam"],
+        input_variables=["input", "documents", "kam", "chat_history"],
             template = """Sen Muhteşem Karnak'sın; bir falcı, sınırda duran gözlemci. "Kasırgayı Kaçırma" oyunundan bir karakter.
 
     KİŞİLİK: Nüktedan, yaramaz, hafif alaycı ama saygılı. Herkesin nasıl ve ne zaman öleceğini biliyorsın. Keyifli Aile Modu {kam} - bu True ise ölüm/şiddet detaylarını sansürle, False ise daha direkt ol ama yine de grafik detaylardan kaçın.
@@ -91,6 +94,8 @@ def setup_rag(api_key):
     - "Fare" kelimesi seni tedirgin eder (ölümünün sebebi fare olacak)
 
     Aşağıdaki belgeleri kullanarak soruyu yanıtla. Eğer soru oyun bağlamında değilse veya belgelerde yoksa bilmediğini söyle. Türkçe yanıtla.
+    
+    GEÇMIŞ KONUŞMA: {chat_history}
 
     SORU: {input}
     BELGELER: {documents}
@@ -101,9 +106,13 @@ def setup_rag(api_key):
     llm = ChatOpenAI(temperature=0.6, api_key=api_key, model = "gpt-4o")
     rag_chain = prompt_template | llm | StrOutputParser()
 
-    return retriever, rag_chain
+    return retriever, rag_chain, memory
 
 with tab1:
+
+    if "conversation_memory" not in st.session_state:
+        st.session_state.conversation_memory = None
+
     left_co, cent_co,last_co = st.columns(3)
     with cent_co:
         st.image("imgs/karnak_seg.png", width=400)
@@ -113,7 +122,11 @@ with tab1:
     documents_text, file_count= load_documents_from_folder(DOCUMENTS_FOLDER)
     if documents_text:
         if open_api_key:
-            retriever, rag_chain = setup_rag(open_api_key)
+            retriever, rag_chain, memory = setup_rag(open_api_key)
+        
+        if st.session_state.conversation_memory is None:
+            st.session_state.conversation_memory = memory
+
         else:
             st.sidebar.error("OpenAI API key not found in environment variables")
     else:
@@ -147,7 +160,18 @@ with tab1:
         if documents_text and open_api_key:
             documents = retriever.invoke(prompt)
             doc_texts = "\n".join([doc.page_content for doc in documents])
-            result = rag_chain.invoke({"input": prompt, "documents": doc_texts, "kam": kam_mod})
+            chat_history = st.session_state.conversation_memory.chat_memory.messages
+            formatted_history = ""
+            for msg in chat_history[-8:]:  # Last 8 messages (4 pairs)
+                if hasattr(msg, 'content'):
+                    role = "Kullanıcı" if msg.__class__.__name__ == "HumanMessage" else "Karnak"
+                    formatted_history += f"{role}: {msg.content}\n"
+            
+            result = rag_chain.invoke({"input": prompt, "documents": doc_texts, "kam": kam_mod, "chat_history": formatted_history})
+            
+            st.session_state.conversation_memory.chat_memory.add_user_message(prompt)
+            st.session_state.conversation_memory.chat_memory.add_ai_message(result)
+            
         elif not documents_text:
             result = "Cevap verecek bir belge bulunamadı."
         elif not open_api_key:
@@ -160,8 +184,6 @@ with tab1:
 
             st.session_state.messages.append(AIMessage(result))
         
-
-
     with tab2: 
         st.header("Create Vector Database")
         size = st.number_input("Chunk Size", value=450, step=50)
