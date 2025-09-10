@@ -86,10 +86,6 @@ def typing_effect_basic(text, base_speed=0.03):
         placeholder.markdown(f"<div class='karnak-response'>{displayed_text}{cursor}</div>", unsafe_allow_html=True)
         
         time.sleep(sleep_time)
-    
-    # Final display without cursor
-    placeholder.markdown(f"<div class='karnak-response'>{displayed_text}</div>", unsafe_allow_html=True)
-
 
 def update_text():
 # Append the new text to the existing file
