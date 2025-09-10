@@ -157,13 +157,13 @@ with tab1:
     documents_text, file_count= load_documents_from_folder(DOCUMENTS_FOLDER)
     if documents_text:
         if open_api_key:
-            retriever, rag_chain, memory = setup_rag(open_api_key)
+            retriever, rag_chain, memory = setup_rag(open_api_key) 
+        else:
+            st.sidebar.error("OpenAI API key not found in environment variables")
         
         if st.session_state.conversation_memory is None:
             st.session_state.conversation_memory = memory
 
-        else:
-            st.sidebar.error("OpenAI API key not found in environment variables")
     else:
         st.sidebar.warning("No document found")
 
