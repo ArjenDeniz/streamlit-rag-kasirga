@@ -10,7 +10,9 @@ from langchain.memory import ConversationBufferWindowMemory
 import os
 from dotenv import load_dotenv
 import glob
+import random
 import pickle
+import time
 
 
 load_dotenv()
@@ -54,6 +56,39 @@ def save_vectordatabase(api_key, document_text, size = 250, overlap = 0 ):
     )
 
     return vectorstore
+
+
+def typing_effect_basic(text, base_speed=0.03):
+    """Advanced typing with realistic pauses and speed variations"""
+    placeholder = st.empty()
+    displayed_text = ""
+    
+    for i, char in enumerate(text):
+        displayed_text += char
+        
+        # Calculate dynamic speed based on character type
+        if char == '.':
+            sleep_time = base_speed * 15  # Long pause after sentences
+        elif char in '!?':
+            sleep_time = base_speed * 12  # Medium pause after exclamations
+        elif char == ',':
+            sleep_time = base_speed * 8   # Short pause after commas
+        elif char == ' ':
+            sleep_time = base_speed * 2   # Slight pause between words
+        elif char == '\n':
+            sleep_time = base_speed * 10  # Pause for new lines
+        else:
+            # Random variation for natural feel
+            sleep_time = base_speed * random.uniform(0.5, 1.5)
+        
+        # Show with cursor
+        cursor = "▋" if i < len(text) - 1 else ""
+        placeholder.markdown(f"<div class='karnak-response'>{displayed_text}{cursor}</div>", unsafe_allow_html=True)
+        
+        time.sleep(sleep_time)
+    
+    # Final display without cursor
+    placeholder.markdown(f"<div class='karnak-response'>{displayed_text}</div>", unsafe_allow_html=True)
 
 def update_text():
 # Append the new text to the existing file
@@ -180,7 +215,14 @@ with tab1:
             result = "Bilinmeyen bir hata oluştu."
 
         with st.chat_message("assistant"):
-            st.markdown(result)
+            intro_placeholder = st.empty()
+            intro_placeholder.markdown("*Karnak kristal küresine bakıyor...*")
+            time.sleep(1.5)
+            intro_placeholder.empty()
+            
+            typing_effect_basic(result, base_speed=0.01)
+            
+            #st.markdown(result)
 
             st.session_state.messages.append(AIMessage(result))
         
