@@ -20,7 +20,7 @@ open_api_key = st.secrets["key"]
 DOCUMENTS_FOLDER= "docs"
 
 st.title(" Muhteşem Karnak")
-tab1,  tab2 = st.tabs(["Chat","Create Vector Database"])
+#tab1,  tab2 = st.tabs(["Chat","Create Vector Database"])
 @st.cache_data
 def load_documents_from_folder(folder_path):
     documents_text = ""
@@ -151,111 +151,111 @@ def setup_rag(api_key):
 
     return retriever, rag_chain, memory
 
-with tab1:
+#with tab1:
 
-    if "conversation_memory" not in st.session_state:
-        st.session_state.conversation_memory = None
+if "conversation_memory" not in st.session_state:
+    st.session_state.conversation_memory = None
 
-    left_co, cent_co,last_co = st.columns(3)
-    with cent_co:
-        st.image("imgs/karnak_seg.png", width=400)
-    with last_co:
-        kam_mod = st.toggle("KAM", value = True, key = "KAM", help="Keyifli Aile Modu")
-    # initialize db
-    documents_text, file_count= load_documents_from_folder(DOCUMENTS_FOLDER)
-    if documents_text:
-        if open_api_key:
-            retriever, rag_chain, memory = setup_rag(open_api_key) 
-        else:
-            st.sidebar.error("OpenAI API key not found in environment variables")
-        
-        if st.session_state.conversation_memory is None:
-            st.session_state.conversation_memory = memory
-
+left_co, cent_co,last_co = st.columns(3)
+with cent_co:
+    st.image("imgs/karnak_seg.png", width=400)
+with last_co:
+    kam_mod = st.toggle("KAM", value = True, key = "KAM", help="Keyifli Aile Modu")
+# initialize db
+documents_text, file_count= load_documents_from_folder(DOCUMENTS_FOLDER)
+if documents_text:
+    if open_api_key:
+        retriever, rag_chain, memory = setup_rag(open_api_key) 
     else:
-        st.sidebar.warning("No document found")
-
-
-    # initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-
-        st.session_state.messages.append(SystemMessage("You are a helpful assistant that answers questions based on uploaded documents."))
+        st.sidebar.error("OpenAI API key not found in environment variables")
     
+    if st.session_state.conversation_memory is None:
+        st.session_state.conversation_memory = memory
 
-    for message in st.session_state.messages:
-        if isinstance(message, HumanMessage):
-            with st.chat_message("user"):
-                st.markdown(message.content)
-        elif isinstance(message, AIMessage):
-            with st.chat_message("assistant"):
-                st.markdown(message.content)
+else:
+    st.sidebar.warning("No document found")
 
-    #prompt = st.chat_input("Muhteşem Karnak'a bir soru sor!")
-    
-    #display chat 
-    if prompt := st.chat_input("Muhteşem Karnak'a bir soru sor!"):
+
+# initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+    st.session_state.messages.append(SystemMessage("You are a helpful assistant that answers questions based on uploaded documents."))
+
+
+for message in st.session_state.messages:
+    if isinstance(message, HumanMessage):
         with st.chat_message("user"):
-            st.markdown(prompt)
-
-            st.session_state.messages.append(HumanMessage(prompt))
-
-        if documents_text and open_api_key:
-            documents = retriever.invoke(prompt)
-            doc_texts = "\n".join([doc.page_content for doc in documents])
-            chat_history = st.session_state.conversation_memory.chat_memory.messages
-            formatted_history = ""
-            for msg in chat_history[-8:]:  # Last 8 messages (4 pairs)
-                if hasattr(msg, 'content'):
-                    role = "Kullanıcı" if msg.__class__.__name__ == "HumanMessage" else "Karnak"
-                    formatted_history += f"{role}: {msg.content}\n"
-            
-            result = rag_chain.invoke({"input": prompt, "documents": doc_texts, "kam": kam_mod, "chat_history": formatted_history})
-            
-            st.session_state.conversation_memory.chat_memory.add_user_message(prompt)
-            st.session_state.conversation_memory.chat_memory.add_ai_message(result)
-            
-        elif not documents_text:
-            result = "Cevap verecek bir belge bulunamadı."
-        elif not open_api_key:
-            result = "OpenAI API anahtarı bulunamadı."
-        else:
-            result = "Bilinmeyen bir hata oluştu."
-
+            st.markdown(message.content)
+    elif isinstance(message, AIMessage):
         with st.chat_message("assistant"):
-            intro_placeholder = st.empty()
-            intro_placeholder.markdown("*Karnak kristal küresine bakıyor...*")
-            time.sleep(1.5)
-            intro_placeholder.empty()
-            
-            typing_effect_basic(result, base_speed=0.01)
-            
-            #st.markdown(result)
+            st.markdown(message.content)
 
-            st.session_state.messages.append(AIMessage(result))
+#prompt = st.chat_input("Muhteşem Karnak'a bir soru sor!")
+
+#display chat 
+if prompt := st.chat_input("Muhteşem Karnak'a bir soru sor!"):
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+        st.session_state.messages.append(HumanMessage(prompt))
+
+    if documents_text and open_api_key:
+        documents = retriever.invoke(prompt)
+        doc_texts = "\n".join([doc.page_content for doc in documents])
+        chat_history = st.session_state.conversation_memory.chat_memory.messages
+        formatted_history = ""
+        for msg in chat_history[-8:]:  # Last 8 messages (4 pairs)
+            if hasattr(msg, 'content'):
+                role = "Kullanıcı" if msg.__class__.__name__ == "HumanMessage" else "Karnak"
+                formatted_history += f"{role}: {msg.content}\n"
         
-    with tab2: 
-        st.header("Create Vector Database")
-        size = st.number_input("Chunk Size", value=450, step=50)
-        overlap = st.number_input("Chunk Overlap", value=50, step=10)
-        text = st.text_area("İçerik Ekle", height = 200, key="new_content", placeholder="Buraya yeni içerik ekleyebilirsiniz. Bu içerik, var olan dokümanlarla birlikte vektör veritabanını oluşturmak için kullanılacaktır.", on_change=update_text)
+        result = rag_chain.invoke({"input": prompt, "documents": doc_texts, "kam": kam_mod, "chat_history": formatted_history})
+        
+        st.session_state.conversation_memory.chat_memory.add_user_message(prompt)
+        st.session_state.conversation_memory.chat_memory.add_ai_message(result)
+        
+    elif not documents_text:
+        result = "Cevap verecek bir belge bulunamadı."
+    elif not open_api_key:
+        result = "OpenAI API anahtarı bulunamadı."
+    else:
+        result = "Bilinmeyen bir hata oluştu."
+
+    with st.chat_message("assistant"):
+        intro_placeholder = st.empty()
+        intro_placeholder.markdown("*Karnak kristal küresine bakıyor...*")
+        time.sleep(1.5)
+        intro_placeholder.empty()
+        
+        typing_effect_basic(result, base_speed=0.01)
+        
+        #st.markdown(result)
+
+        st.session_state.messages.append(AIMessage(result))
+    
+    # with tab2: 
+    #     st.header("Create Vector Database")
+    #     size = st.number_input("Chunk Size", value=450, step=50)
+    #     overlap = st.number_input("Chunk Overlap", value=50, step=10)
+    #     text = st.text_area("İçerik Ekle", height = 200, key="new_content", placeholder="Buraya yeni içerik ekleyebilirsiniz. Bu içerik, var olan dokümanlarla birlikte vektör veritabanını oluşturmak için kullanılacaktır.", on_change=update_text)
         
 
-        if st.button("Process Documents and Create"):
-            if not open_api_key:
-                st.error("Anahtar Bulunumadı.")
-            elif not os.path.exists(DOCUMENTS_FOLDER):
-                st.error(f"Klasör {DOCUMENTS_FOLDER} bulunamadı.")
-            else:
-                with st.spinner("Yaratılıyor..."):
+    #     if st.button("Process Documents and Create"):
+    #         if not open_api_key:
+    #             st.error("Anahtar Bulunumadı.")
+    #         elif not os.path.exists(DOCUMENTS_FOLDER):
+    #             st.error(f"Klasör {DOCUMENTS_FOLDER} bulunamadı.")
+    #         else:
+    #             with st.spinner("Yaratılıyor..."):
 
-                    #load documents
-                    documents_text, file_count = load_documents_from_folder(DOCUMENTS_FOLDER)
-                    if documents_text:
-                        # create and save db
-                        vectorstore= save_vectordatabase(open_api_key, documents_text, size=size, overlap=overlap)
-                        vectorstore.persist()
-                        st.success(f"Database oluşturuldu! Toplam {file_count} doküman yüklendi ve işlendi.")
+    #                 #load documents
+    #                 documents_text, file_count = load_documents_from_folder(DOCUMENTS_FOLDER)
+    #                 if documents_text:
+    #                     # create and save db
+    #                     vectorstore= save_vectordatabase(open_api_key, documents_text, size=size, overlap=overlap)
+    #                     vectorstore.persist()
+    #                     st.success(f"Database oluşturuldu! Toplam {file_count} doküman yüklendi ve işlendi.")
                     
-                    else:
-                        st.error("Doküman yüklenemedi veya boş.")
+    #                 else:
+    #                     st.error("Doküman yüklenemedi veya boş.")
