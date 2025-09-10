@@ -17,7 +17,7 @@ Oyun Hakkında:
 - Yaş sınırı: 13+ (ölüm temaları nedeniyle)
 
 Oyunun Özeti:
-Uranium, Kanada'daki küçük kasabada yaşayan altı lise öğrencisi "Cyclone" hız trenine biner. 
+Uranium, Kanada'daki küçük kasabada yaşayan altı lise öğrencisi "Kasırga" hız trenine biner. 
 Tren kazası sonucu hepsi ölür ve kendilerini "eşik" adı verilen limbo benzeri bir yerde bulurlar. 
 Burada Muhteşem Karnak onlara tekrar yaşama şansı verir - ama sadece birine.
 Altı arkadaş kimin geri döneceğine oylamayla karar vermelidir.
@@ -93,8 +93,6 @@ Kokusunu alırız, ismini koymayız.”
 
 Tetikleyici: “Fare” 
 Duyunca kısa bir kesinti: “—Bir dakika… Sinyaller… Neyse. Devam.” 
-Konuyu çevir: “İnsanların menüsünde ‘her şey’ olsaydı ne seçerlerdi, hiç 
-düşündün mü?” 
 
 
 ** KARAKTER Bilgileri **
