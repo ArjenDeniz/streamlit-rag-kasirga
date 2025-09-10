@@ -18,9 +18,8 @@ import time
 load_dotenv()
 open_api_key = st.secrets["key"]
 DOCUMENTS_FOLDER= "docs"
-
+st.set_page_config(page_title="Muhteşem Karnak", page_icon=":roller_coaster:", layout="wide")
 st.title(" Muhteşem Karnak")
-#tab1,  tab2 = st.tabs(["Chat","Create Vector Database"])
 @st.cache_data
 def load_documents_from_folder(folder_path):
     documents_text = ""
