@@ -257,3 +257,5 @@ if prompt := st.chat_input("Muhteşem Karnak'a bir soru sor!"):
                     
     #                 else:
     #                     st.error("Doküman yüklenemedi veya boş.")
+    #
+    #
