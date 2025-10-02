@@ -15,6 +15,15 @@ import pickle
 import time
 
 
+example_questions = [
+    "En sevdiğin karakter hangisi?",
+    "Ne zaman öleceğim?",
+    "Bir sonraki gösterim tarihi ne zaman?",
+    "Bana hikayeni anlatır mısın?",
+]
+
+
+
 load_dotenv()
 open_api_key = st.secrets["key"]
 DOCUMENTS_FOLDER= "docs"
@@ -183,7 +192,10 @@ with tab1:
         st.session_state.messages = []
 
         st.session_state.messages.append(SystemMessage("You are a helpful assistant that answers questions based on uploaded documents."))
+        st.session_state.messages.append(AIMessage("Merhaba, geleceğinizi biliyordum. Cevapları duymaya hazırsınız, değil mi? Gelecekten nasıl bir fısıltı dinlemek istersiniz? 🔮"))
 
+    if "has_started" not in st.session_state:
+        st.session_state.has_started = False
 
     for message in st.session_state.messages:
         if isinstance(message, HumanMessage):
@@ -194,9 +206,47 @@ with tab1:
                 st.markdown(message.content)
 
     #prompt = st.chat_input("Muhteşem Karnak'a bir soru sor!")
+        # Show example questions only at the beginning
+    if not st.session_state.has_started:
+        cols = st.columns(len(example_questions))
+        for i, q in enumerate(example_questions):
+            if cols[i].button(q):
+
+                st.session_state.has_started = True
+                st.session_state.messages.append(HumanMessage(q))
+                with st.chat_message("user"):
+                    st.markdown(q)
+
+                if documents_text and open_api_key:
+                    documents = retriever.invoke(q)
+                    doc_texts = "\n".join([doc.page_content for doc in documents])
+
+                    print("retrieved documents:", documents)
+                    chat_history = st.session_state.conversation_memory.chat_memory.messages
+                    formatted_history = ""
+                    for msg in chat_history[-8:]:
+                        if hasattr(msg, 'content'):
+                            role = "Kullanıcı" if msg.__class__.__name__ == "HumanMessage" else "Karnak"
+                            formatted_history += f"{role}: {msg.content}\n"
+
+                    result = rag_chain.invoke({"input": q, "documents": doc_texts, "kam": kam_mod, "chat_history": formatted_history})
+                    st.session_state.conversation_memory.chat_memory.add_user_message(q)
+                    st.session_state.conversation_memory.chat_memory.add_ai_message(result)
+                else:
+                    result = "Cevap verecek bir belge bulunamadı."
+
+                with st.chat_message("assistant"):
+                    intro_placeholder = st.empty()
+                    intro_placeholder.markdown("*Karnak kristal küresine bakıyor...*")
+                    time.sleep(1.5)
+                    intro_placeholder.empty()
+                    typing_effect_basic(result, base_speed=0.01)
+
+                st.session_state.messages.append(AIMessage(result))
 
     #display chat 
     if prompt := st.chat_input("Muhteşem Karnak'a bir soru sor!"):
+        st.session_state.has_started = True  # hide suggestions after first input
         with st.chat_message("user"):
             st.markdown(prompt)
 
