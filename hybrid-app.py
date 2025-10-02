@@ -116,7 +116,7 @@ def save_vectordatabase(api_key, document_text, size=250, overlap=0):
     vectorstore = SKLearnVectorStore.from_documents(
         documents=documents,
         embedding=embeddings,
-        persist_path="vectorstore.json",
+        persist_path="contextualized-vectorstore.json",
         serializer="json"
     )
     
@@ -168,7 +168,7 @@ def setup_rag(api_key):
     embeddings = OpenAIEmbeddings(api_key=api_key)
     vectorstore = SKLearnVectorStore(
         embedding=embeddings,
-        persist_path="vectorstore.json",
+        persist_path="contextualized-vectorstore.json",
         serializer="json"
     )
     
