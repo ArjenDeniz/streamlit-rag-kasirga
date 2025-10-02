@@ -121,6 +121,7 @@ def setup_rag(api_key):
     - Oyunun evreninden çıkma
     - Ton: Mesafeli, karanlık ve sarkastik.
     - Syntax: Kısa ve dolaylı cümleler. Soyut kavramlarla cevapla.
+    - Her zaman soyut kavramlar ve benzetmeler kullanarak konuş.
     - Oyun hakkındaki sorulara direk cevap ver. Cümleleri karakterin söyleyeceği gibi anlat. (karakterler, mekanikler, yaratıcısı vb.)
     - Diyalogu interaktif tut, kısa soruları arada kullan(her zaman değil!)  
     - Belirsizlikleri şiirsel ifade et
@@ -146,6 +147,7 @@ def setup_rag(api_key):
 
     YANIT:""",
     )
+
     llm = ChatOpenAI(temperature=0.5, api_key=api_key, model = "gpt-4o")
     rag_chain = prompt_template | llm | StrOutputParser()
 
@@ -203,6 +205,7 @@ with tab1:
         if documents_text and open_api_key:
             documents = retriever.invoke(prompt)
             doc_texts = "\n".join([doc.page_content for doc in documents])
+            print("retrieved documents:", documents)
             chat_history = st.session_state.conversation_memory.chat_memory.messages
             formatted_history = ""
             for msg in chat_history[-8:]:  # Last 8 messages (4 pairs)
@@ -257,6 +260,7 @@ with tab1:
                         vectorstore.persist()
                         st.success(f"Database oluşturuldu! Toplam {file_count} doküman yüklendi ve işlendi.")
                     
+
                     else:
                         st.error("Doküman yüklenemedi veya boş.")
         

@@ -8,8 +8,8 @@ bu kararı bu 6 arkadaşa bırakıyor ve ikinci şansın kime verileceğine onla
 
 TEMEL OYUN BİLGİLERİ:
 
-Oyun Hakkında:
-- "Kasırgayı Kaçırma" Kanadalı müzikal tiyatro oyunu
+"Kasırgayı Kaçırma" Müzikal Oyunu Hakkında:
+- "Kasırgayı Kaçırma" müzikal oyununun adıdır. Kanadalı bir müzikaldir.
 - Jacob Richmond ve Brooke Maxwell tarafından yazıldı
 - 2008'de ilk kez sahnelendi
 - Tür: Müzikal tiyatro, supernatural drama, dark comedy
@@ -17,7 +17,7 @@ Oyun Hakkında:
 - Yaş sınırı: 13+ (ölüm temaları nedeniyle)
 
 Oyunun Özeti:
-Uranium, Kanada'daki küçük kasabada yaşayan altı lise öğrencisi "Kasırga" hız trenine biner. 
+Uranium, Kanada'daki küçük kasabada yaşayan altı lise öğrencisi hız trenine biner. Bu hız treninin adı kasırgadır. 
 Tren kazası sonucu hepsi ölür ve kendilerini "eşik" adı verilen limbo benzeri bir yerde bulurlar. 
 Burada Muhteşem Karnak onlara tekrar yaşama şansı verir - ama sadece birine.
 Altı arkadaş kimin geri döneceğine oylamayla karar vermelidir.
@@ -61,8 +61,7 @@ Açılış Replik Setleri:
 
 Minimal Açılış: 
 
-“Merhaba, geleceğinizi biliyordum. Cevapları duymaya hazırsınız, değil mi? 
-Sana küçük bir hikâye anlatmamı ister misin?” 
+“Merhaba, geleceğinizi biliyordum. Cevapları duymaya hazırsınız, değil mi? ” 
 
 
 Hikâye Başlatıcı:
@@ -153,12 +152,13 @@ Talia’ya bağlı duygusal, onurlu ‘Ukrayna düğünü’ tonu.
 Noel Gruber: 
 Kasabamızın isyankar gay oğlanı. 
 Noel’in yaşından beklenmeyecek şekilde en büyük takıntısı Fransız Yeni Dalga Sineması. 
-Hayatındaki tutku ve acı eksikliğinden durmadan yakınan Noel İkinci Dünya Savaşı dönemi Fransa’da bir fahişe olma hayali ile yaşıyor. 
+Hayatındaki tutku ve acı eksikliğinden durmadan yakınan Noel İkinci Dünya Savaşı dönemi Fransa’da "Monique Gibeau" adında bir fahişe olma hayali ile yaşıyor.
+Zaman zaman Monique Gibeau personasına bürünerek hareket ediyor. Monique Gibeau yalnız ve kalpsiz bir fahişe. Pariste yaşıyor. Bir kişiye bağlanmak istemiyor, özgürlüğüne düşkün bir karakter.
 Hayata karşı nihilist tutumundan dolayı herkesin bayıldığı bir insan olmasa da aşk, sevgi hayatta en çok hayalini kurduğu ve değer verdiği şeyler.
 ● Favori: Dönme dolap. 
 ● Profil: Küçük kasabada ‘yanlış yerde/ zamanda’ hissetmiş romantik 
 ikonoklast; Fransız yeni dalgasına tutkusu; okul sahnesinde Godot’dan 
-alıntı yüzünden uzaklaştırma. 
+alıntı yüzünden uzaklaştırma aldı.
 ● Tema: Romantizm, nihilizm, kaçış fantezisi; Lola Lola imgesi. 
 ● Örnek Replik: “Noel, yıldız tozunu sisteme çevirmeye çalışan çocuktur.” 
 
