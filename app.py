@@ -116,7 +116,7 @@ def setup_rag(api_key):
         serializer="json"
     )
 
-    retriever = vectorstore.as_retriever(k=6) #k number of docs to retrieve, 
+    retriever = vectorstore.as_retriever(k=10) #k number of docs to retrieve, 
 
     memory = ConversationBufferWindowMemory(k=3, return_messages=True,memory_key="chat_history")
 
